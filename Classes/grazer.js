@@ -72,6 +72,7 @@ module.exports = class Grazer extends LivingCreature {
             this.x = newX
             this.y = newY
 
+            this.mul();
             for (let i in grassArr) {
                 let grassObj = grassArr[i]
                 if (grassObj.x === newX && grassObj.y === newY) {
@@ -88,7 +89,6 @@ module.exports = class Grazer extends LivingCreature {
     }
 
     mul() {
-        this.multiply++;
         if (isRaining && this.multiply >= 10) {
             let emptyCells = this.chooseCell(0);
             let theChosenField = emptyCells[Math.floor(Math.random() * emptyCells.length)]

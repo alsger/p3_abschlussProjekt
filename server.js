@@ -89,11 +89,9 @@ function updateGame() {
     }
     for (let i in grazerArr) {
         grazerArr[i].eat();
-        grazerArr[i].mul();
     }
     for (let i in predatorArr) {
         predatorArr[i].eat();
-        predatorArr[i].mul();
     }
 
     io.emit("send matrix", matrix);
